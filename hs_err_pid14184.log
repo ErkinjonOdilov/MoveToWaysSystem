@@ -1,0 +1,205 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=14184, tid=16524
+#
+# JRE version:  (18.0.2+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (18.0.2+9-61, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\lib\idea_rt.jar=1456:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\bin -Dfile.encoding=UTF-8 Test
+
+Host: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1806)
+Time: Thu Aug 11 16:44:27 2022 West Asia Standard Time elapsed time: 0.038372 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002685b8cd290):  JavaThread "Unknown thread" [_thread_in_vm, id=16524, stack(0x000000b6b1b00000,0x000000b6b1c00000)]
+
+Stack: [0x000000b6b1b00000,0x000000b6b1c00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6993ca]
+V  [jvm.dll+0x7f481d]
+V  [jvm.dll+0x7f612e]
+V  [jvm.dll+0x7f67e3]
+V  [jvm.dll+0x25cdaf]
+V  [jvm.dll+0xb31af]
+V  [jvm.dll+0x2f7e19]
+V  [jvm.dll+0x7c341b]
+V  [jvm.dll+0x38be61]
+V  [jvm.dll+0x7a2073]
+V  [jvm.dll+0x40dc3f]
+V  [jvm.dll+0x40f611]
+C  [jli.dll+0x526b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb4b8fe550, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000002685b8cd290 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=16524, stack(0x000000b6b1b00000,0x000000b6b1c00000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.023 Loaded shared library C:\Users\erkin\.jdks\openjdk-18.0.2\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff644200000 - 0x00007ff64420e000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\java.exe
+0x00007ffb7e5f0000 - 0x00007ffb7e7e8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffb7cad0000 - 0x00007ffb7cb8d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffb7bf50000 - 0x00007ffb7c21e000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffb7c2e0000 - 0x00007ffb7c3e0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffb77890000 - 0x00007ffb778aa000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\VCRUNTIME140.dll
+0x00007ffb77830000 - 0x00007ffb77847000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\jli.dll
+0x00007ffb7dbf0000 - 0x00007ffb7dd90000 	C:\Windows\System32\USER32.dll
+0x00007ffb7bf20000 - 0x00007ffb7bf42000 	C:\Windows\System32\win32u.dll
+0x00007ffb7da90000 - 0x00007ffb7daba000 	C:\Windows\System32\GDI32.dll
+0x00007ffb65e30000 - 0x00007ffb660ca000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffb7c450000 - 0x00007ffb7c55b000 	C:\Windows\System32\gdi32full.dll
+0x00007ffb7e3e0000 - 0x00007ffb7e47e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffb7c560000 - 0x00007ffb7c5fd000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffb7e3b0000 - 0x00007ffb7e3e0000 	C:\Windows\System32\IMM32.DLL
+0x00007ffb77820000 - 0x00007ffb7782c000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\vcruntime140_1.dll
+0x00007ffb6b840000 - 0x00007ffb6b8cd000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\msvcp140.dll
+0x00007ffb4ae20000 - 0x00007ffb4ba31000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\server\jvm.dll
+0x00007ffb7cb90000 - 0x00007ffb7cc3e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffb7d850000 - 0x00007ffb7d8ec000 	C:\Windows\System32\sechost.dll
+0x00007ffb7e480000 - 0x00007ffb7e5a5000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffb7d900000 - 0x00007ffb7d908000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffb77880000 - 0x00007ffb77889000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffb7dd90000 - 0x00007ffb7ddfb000 	C:\Windows\System32\WS2_32.dll
+0x00007ffb750e0000 - 0x00007ffb750ea000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffb65dd0000 - 0x00007ffb65df7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffb79c10000 - 0x00007ffb79c22000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffb77810000 - 0x00007ffb7781a000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\jimage.dll
+0x00007ffb69be0000 - 0x00007ffb69dc4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffb69510000 - 0x00007ffb6953c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffb7c220000 - 0x00007ffb7c2a2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffb777e0000 - 0x00007ffb777ee000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\instrument.dll
+0x00007ffb6d900000 - 0x00007ffb6d925000 	C:\Users\erkin\.jdks\openjdk-18.0.2\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\erkin\.jdks\openjdk-18.0.2\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\erkin\.jdks\openjdk-18.0.2\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\lib\idea_rt.jar=1456:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.1\bin -Dfile.encoding=UTF-8 
+java_command: Test
+java_class_path (initial): D:\JAVA BACKEND\Shox\Tasks\Backend\MoveByWays\out\production\MoveByWays;D:\JAVA BACKEND\Shox\video lessons\Java\gson-2.9.0.jar;D:\JAVA BACKEND\mysql-connector-java-8.0.30 (1)\mysql-connector-java-8.0.30\mysql-connector-java-8.0.30.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2092957696                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2092957696                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\erkin\AppData\Local\Microsoft\WindowsApps;C:\Users\erkin\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=erkin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.1806)
+OS uptime: 3 days 21:02 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 126 stepping 5 microcode 0x78, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, avx512_vbmi2, avx512_vbmi
+
+Memory: 4k page, system-wide physical 7981M (489M free)
+TotalPageFile size 23063M (AvailPageFile size 7M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 18M, peak: 19M
+
+vm_info: OpenJDK 64-Bit Server VM (18.0.2+9-61) for windows-amd64 JRE (18.0.2+9-61), built on Jun  7 2022 13:05:59 by "mach5one" with MS VC++ 16.8 / 16.9 (VS2019)
+
+END.
